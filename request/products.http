@@ -1,0 +1,30 @@
+@api = http://localhost:1000/products/541d9ecb-8163-4db0-967d-b23e02fb0132
+
+GET {{api}}
+###
+
+POST  {{api}}
+Content-Type: application/json
+
+# {
+#     "airport": {
+#       "name": "International Airport",
+#       "iataCode": "NBO"
+#     },
+#     "flightNumber": "255"
+# }
+
+{
+    "name": "sin nombre ",
+    "price": 883,
+    "image": "https://picsum.photos/seed/vxqa7K/640/480"
+}
+###
+PATCH {{api}}
+Content-Type: application/json
+
+{
+    "name": "hola"
+}
+###
+DELETE  {{api}}
