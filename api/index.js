@@ -9,13 +9,13 @@ const {
   errorHandLer,
   boomErrorHandLer,
 } = require("./middleware/errorHandling.js");
-const port = 1000;
+const port = process.env.PORT || 1000;
 app.use(express.json());
 
-app.get("/callback", (req, res) => {
-  console.log("hhhhhh");
-  res.redirect("http://localhost:3000/productos");
-});
+// app.get("/callback", (req, res) => {
+//   console.log("hhhhhh");
+//   res.redirect("http://localhost:3000/productos");
+// });
 app.use(cors());
 app.use(routes);
 app.use(logErrors);
